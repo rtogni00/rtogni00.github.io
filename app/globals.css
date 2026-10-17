@@ -1,26 +1,182 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #000000;
+  --foreground: #00ff00;
+  --terminal-green: #00ff00;
+  --terminal-green-dim: #009900;
+  --terminal-green-bright: #33ff33;
+  --terminal-gray: #333333;
+  --terminal-gray-dark: #1a1a1a;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-terminal-green: var(--terminal-green);
+  --color-terminal-green-dim: var(--terminal-green-dim);
+  --color-terminal-green-bright: var(--terminal-green-bright);
+  --color-terminal-gray: var(--terminal-gray);
+  --color-terminal-gray-dark: var(--terminal-gray-dark);
+  --font-mono: "Courier New", Courier, monospace;
+  --font-sans: "Courier New", Courier, monospace;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #000000;
+    --foreground: #00ff00;
   }
+}
+
+* {
+  box-sizing: border-box;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-mono);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+.terminal-window {
+  background: var(--terminal-gray-dark);
+  border: 2px solid var(--terminal-green);
+  border-radius: 4px;
+  box-shadow: 0 0 20px rgba(0, 255, 0, 0.3);
+  position: relative;
+  margin: 1rem 0;
+}
+
+.terminal-window::before {
+  content: "$ ls";
+  display: block;
+  background: var(--terminal-gray);
+  color: var(--terminal-green-bright);
+  padding: 0.5rem;
+  font-size: 0.875rem;
+  border-bottom: 1px solid var(--terminal-green);
+}
+
+.terminal-content {
+  padding: 1.5rem;
+}
+
+.terminal-header {
+  background: var(--terminal-gray);
+  color: var(--terminal-green-bright);
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid var(--terminal-green);
+  font-size: 0.875rem;
+}
+
+.ascii-box {
+  background: var(--terminal-gray-dark);
+  border: 1px solid var(--terminal-green);
+  padding: 1rem;
+  margin: 1rem 0;
+  font-family: var(--font-mono);
+  white-space: pre-wrap;
+  overflow-x: auto;
+  position: relative;
+}
+
+.ascii-box::before {
+  content: "// ASCII ART";
+  display: block;
+  color: var(--terminal-green-dim);
+  font-size: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.terminal-button {
+  background: var(--terminal-green);
+  color: var(--background);
+  border: 1px solid var(--terminal-green-bright);
+  padding: 0.5rem 1rem;
+  border-radius: 2px;
+  cursor: pointer;
+  font-family: var(--font-mono);
+  transition: all 0.2s ease;
+}
+
+.terminal-button:hover {
+  background: var(--terminal-green-bright);
+  box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+}
+
+.terminal-input {
+  background: var(--terminal-gray-dark);
+  border: 1px solid var(--terminal-green);
+  color: var(--terminal-green-bright);
+  padding: 0.5rem;
+  font-family: var(--font-mono);
+  border-radius: 2px;
+}
+
+.terminal-input:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 255, 0, 0.5);
+}
+
+.scrollable-terminal {
+  max-height: 400px;
+  overflow-y: auto;
+  background: var(--terminal-gray-dark);
+  border: 1px solid var(--terminal-green);
+  padding: 1rem;
+  margin: 1rem 0;
+  font-family: var(--font-mono);
+}
+
+.scrollable-terminal::-webkit-scrollbar {
+  width: 8px;
+}
+
+.scrollable-terminal::-webkit-scrollbar-track {
+  background: var(--terminal-gray-dark);
+}
+
+.scrollable-terminal::-webkit-scrollbar-thumb {
+  background: var(--terminal-green);
+  border-radius: 4px;
+}
+
+.scrollable-terminal::-webkit-scrollbar-thumb:hover {
+  background: var(--terminal-green-bright);
+}
+
+.link-terminal {
+  color: var(--terminal-green);
+  text-decoration: none;
+  border-bottom: 1px dotted var(--terminal-green);
+  transition: all 0.2s ease;
+}
+
+.link-terminal:hover {
+  color: var(--terminal-green-bright);
+  border-bottom-style: solid;
+  text-decoration: none;
+}
+
+.section-divider {
+  border: none;
+  border-top: 1px solid var(--terminal-green-dim);
+  margin: 2rem 0;
+  opacity: 0.5;
+}
+
+.terminal-accent {
+  color: var(--terminal-green-bright);
+  font-weight: bold;
+}
+
+.terminal-dim {
+  color: var(--terminal-green-dim);
+}
+
+.terminal-fade {
+  opacity: 0.7;
 }
