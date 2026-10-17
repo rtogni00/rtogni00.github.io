@@ -5,6 +5,7 @@ import HeroSection from "./HeroSection";
 import Career from "./Career";
 import ProjectsList from "./ProjectsList";
 import AcademicRecord from "./AcademicRecord";
+import Hobbies from "./Hobbies";
 
 interface HistoryEntry {
   type: "command" | "output" | "error";
@@ -78,6 +79,9 @@ export default function TerminalApp() {
       case "studies":
         outputContent = <AcademicRecord />;
         break;
+      case "hobbies":
+        outputContent = <Hobbies />;
+        break;
       case "help":
         outputContent = (
           <div className="space-y-1 text-sm">
@@ -103,6 +107,10 @@ export default function TerminalApp() {
             <div>
               <span className="text-terminal-green-bright">clear</span>{" "}
               <span className="text-terminal-green-dim">- clear history</span>
+            </div>
+            <div>
+              <span className="text-terminal-green-bright">hobbies</span>{" "}
+              <span className="text-terminal-green-dim">- hobbies list</span>
             </div>
             <div>
               <span className="text-terminal-green-bright">help</span>{" "}
