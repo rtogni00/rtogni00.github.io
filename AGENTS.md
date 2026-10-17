@@ -69,6 +69,11 @@ Prefer short sections and bullets. If the repo is simple, keep the file simple. 
 
 If `AGENTS.md` already exists at `/home/rob/Projects/my-retro-cv`, improve it in place rather than rewriting blindly. Preserve verified useful guidance, delete fluff or stale claims, and reconcile it with the current codebase.
 
+## Collaboration guidelines
+
+- Always ask before committing anything. Use the `question` tool to confirm changes, especially when modifying files or adding new functionality.
+- When committing, use clear, descriptive commit messages that explain the purpose and changes made.
+
 ## Next.js 16 specific notes
 
 - This repo uses Next.js 16.4.2 with App Router
