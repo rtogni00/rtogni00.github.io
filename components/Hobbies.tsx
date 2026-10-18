@@ -13,26 +13,25 @@ export default function Hobbies() {
             key={index}
             className="border border-terminal-green/30 rounded p-3 bg-terminal-gray-dark/30"
           >
-            <h3 className="text-lg font-bold text-terminal-green-bright mb-2">
+            <h3 className="text-base font-bold text-terminal-green-bright mb-1">
               {hobby.title}
             </h3>
 
-            <p className="text-terminal-green text-sm mb-2">
-              {hobby.description}
-            </p>
+            <p className="text-terminal-green text-sm">{hobby.description}</p>
+
+            {hobby.link && (
+              <a
+                href={hobby.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-xs text-terminal-green-bright underline hover:text-terminal-green mt-2 inline-block"
+              >
+                {hobby.linkLabel ?? hobby.link}
+              </a>
+            )}
           </div>
         ))}
       </div>
-
-      {/* <div className="mt-6 p-3 bg-terminal-gray-dark border border-terminal-green/30 rounded">
-        <p className="text-terminal-green-dim text-xs">
-          <span className="text-terminal-green-bright">$</span> hobbies_list
-        </p>
-        <p className="text-terminal-green text-xs mt-1">
-          Hobbies collection loaded successfully. Total hobbies:{" "}
-          {hobbies.length}
-        </p>
-      </div> */}
     </div>
   );
 }

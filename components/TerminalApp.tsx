@@ -110,7 +110,9 @@ export default function TerminalApp() {
             </div>
             <div>
               <span className="text-terminal-green-bright">hobbies</span>{" "}
-              <span className="text-terminal-green-dim">- hobbies list</span>
+              <span className="text-terminal-green-dim">
+                - my hobbies and interests
+              </span>
             </div>
             <div>
               <span className="text-terminal-green-bright">help</span>{" "}

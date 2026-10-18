@@ -16,7 +16,6 @@ export const career: CareerEntry[] = [
       "Next.js",
       "TypeScript",
       "React",
-      "Node.js",
       "Python",
       "Mendix",
       "Agentic Development",

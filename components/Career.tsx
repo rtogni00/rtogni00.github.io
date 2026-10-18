@@ -3,6 +3,10 @@ import { career } from "@/data/career";
 export default function Career() {
   return (
     <div className="space-y-6">
+      <h2 className="text-xl font-bold text-terminal-green-bright mb-4">
+        Career
+      </h2>
+
       {career.map((job, index) => (
         <div
           key={index}

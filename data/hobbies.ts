@@ -1,20 +1,25 @@
-export const hobbies = [
+export interface Hobby {
+  title: string;
+  description: string;
+  link?: string;
+  linkLabel?: string;
+}
+
+export const hobbies: Hobby[] = [
   {
-    title: "Photography",
-    description: "Capturing moments and exploring different perspectives through film and digital photography.",
-    icon: "📷",
-    interest: "intermediate",
+    title: "Hiking",
+    description:
+      "My ideal weekend involves waking up in a tent to an astonishing sunrise.",
   },
   {
-    title: "Retro Gaming",
-    description: "Enthusiast of classic video games from the 80s and 90s, especially platformers and RPGs.",
-    icon: "🎮",
-    interest: "advanced",
+    title: "Reading",
+    description:
+      "I love losing myself in a well-written book, especially on cold, rainy days.",
   },
   {
-    title: " Woodworking",
-    description: "Creating functional and decorative wooden pieces, from small crafts to furniture.",
-    icon: "🔨",
-    interest: "beginner",
+    title: "Playing Chess",
+    description: "Always up for a game.",
+    link: "https://www.chess.com/member/RobTog",
+    linkLabel: "chess.com/RobTog",
   },
 ];
