@@ -110,15 +110,11 @@ export default function TerminalApp() {
             </div>
             <div>
               <span className="text-terminal-green-bright">hobbies</span>{" "}
-              <span className="text-terminal-green-dim">
-                - my hobbies and interests
-              </span>
+              <span className="text-terminal-green-dim">- my hobbies and interests</span>
             </div>
             <div>
               <span className="text-terminal-green-bright">help</span>{" "}
-              <span className="text-terminal-green-dim">
-                - show this message
-              </span>
+              <span className="text-terminal-green-dim">- show this message</span>
             </div>
           </div>
         );
@@ -131,8 +127,7 @@ export default function TerminalApp() {
               command not found: {trimmedInput}
             </div>
             <div className="text-xs mt-1 text-red-500">
-              Type <span className="font-bold">help</span> for available
-              commands.
+              Type <span className="font-bold">help</span> for available commands.
             </div>
           </div>
         );
@@ -157,12 +152,11 @@ export default function TerminalApp() {
   return (
     <div className="h-full flex flex-col bg-black text-green-400 font-mono overflow-hidden">
       {/* ASCII logo — fixed, no scrolling */}
-      <div className="shrink-0 px-4 pt-4 pb-2 flex justify-center">
-        <pre className="text-terminal-green-bright text-[10px] md:text-xs leading-tight whitespace-pre">
+      <div className="@container w-full flex justify-center">
+        <pre className="text-terminal-green-bright text-[ming(4cqw,16px)] leading-tight whitespace-pre">
           {ASCII_LOGO}
         </pre>
       </div>
-
       {/* Terminal window — grows to fill, only inner history scrolls */}
       <div className="flex-1 min-h-0 mx-4 mb-4 flex flex-col border border-terminal-green/40 bg-black/80">
         <div className="shrink-0 px-4 py-2 border-b border-terminal-green/30 text-xs text-terminal-green-dim flex justify-between">
@@ -170,14 +164,11 @@ export default function TerminalApp() {
           <span>bash</span>
         </div>
 
-        <div
-          ref={historyRef}
-          className="flex-1 min-h-0 overflow-y-auto p-4 text-sm"
-        >
+        <div ref={historyRef} className="flex-1 min-h-0 overflow-y-auto p-4 text-sm">
           {history.length === 0 ? (
             <div className="text-terminal-green-dim italic">
-              Welcome. Type <span className="font-bold">help</span> for
-              available commands.
+              Welcome. Type <span className="font-bold">help</span> for available
+              commands.
             </div>
           ) : (
             history.map((entry, i) => (
