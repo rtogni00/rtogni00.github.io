@@ -152,8 +152,8 @@ export default function TerminalApp() {
   return (
     <div className="h-full flex flex-col bg-black text-green-400 font-mono overflow-hidden">
       {/* ASCII logo — fixed, no scrolling */}
-      <div className="@container w-full flex justify-center">
-        <pre className="text-terminal-green-bright text-[ming(4cqw,16px)] leading-tight whitespace-pre">
+      <div className="shrink-0 px-4 pt-4 pb-2 flex justify-center w-full min-w-0">
+        <pre className="text-terminal-green-bright text-[clamp(8px,2.5vw,18px)] leading-tight whitespace-pre">
           {ASCII_LOGO}
         </pre>
       </div>

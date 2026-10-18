@@ -1,3 +1,4 @@
+@import url("https://fonts.cdnfonts.com/css/dejavu-sans-mono");
 @import "tailwindcss";
 
 :root {
@@ -18,8 +19,8 @@
   --color-terminal-green-bright: var(--terminal-green-bright);
   --color-terminal-gray: var(--terminal-gray);
   --color-terminal-gray-dark: var(--terminal-gray-dark);
-  --font-mono: "Courier New", Courier, monospace;
-  --font-sans: "Courier New", Courier, monospace;
+  --font-mono: "DejaVu Sans Mono", "Courier New", Courier, monospace;
+  --font-sans: "DejaVu Sans Mono", "Courier New", Courier, monospace;
 }
 
 @media (prefers-color-scheme: dark) {
