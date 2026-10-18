@@ -7,6 +7,8 @@ import ProjectsList from "./ProjectsList";
 import AcademicRecord from "./AcademicRecord";
 import Hobbies from "./Hobbies";
 
+const PROMPT = "visitor@rtogni00:~$";
+
 interface HistoryEntry {
   type: "command" | "output" | "error";
   content: React.ReactNode;
@@ -56,7 +58,7 @@ export default function TerminalApp() {
       content: (
         <div className="flex items-center gap-2">
           <span className="text-terminal-green-bright font-mono">
-            visitor@retro-cv:~$
+            {PROMPT}
           </span>
           <span className="text-terminal-green">{trimmedInput}</span>
         </div>
@@ -160,7 +162,7 @@ export default function TerminalApp() {
       {/* Terminal window — grows to fill, only inner history scrolls */}
       <div className="flex-1 min-h-0 mx-4 mb-4 flex flex-col border border-terminal-green/40 bg-black/80">
         <div className="shrink-0 px-4 py-2 border-b border-terminal-green/30 text-xs text-terminal-green-dim flex justify-between">
-          <span>visitor@retro-cv:~$</span>
+          <span>{PROMPT}</span>
           <span>bash</span>
         </div>
 
@@ -184,7 +186,7 @@ export default function TerminalApp() {
           className="shrink-0 border-t border-terminal-green/30 px-4 py-3 flex items-center gap-3"
         >
           <span className="text-terminal-green-bright whitespace-nowrap">
-            visitor@retro-cv:~$
+            {PROMPT}
           </span>
           <input
             ref={inputRef}
