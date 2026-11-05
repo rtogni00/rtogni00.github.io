@@ -1,5 +1,13 @@
 export const projects = [
   {
+    title: "Todo2Done",
+    year: "2026",
+    description: "A simple Obsidian plugin to automatically archive completed tasks",
+    technologies: ["Typescript"],
+    status: "completed",
+    link: "https://github.com/rtogni00/todo2done",
+  },
+  {
     title: "Retro CV Website",
     year: "2026",
     description:
